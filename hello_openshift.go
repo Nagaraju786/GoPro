@@ -9,7 +9,7 @@ import (
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	response := os.Getenv("RESPONSE")
 	if len(response) == 0 {
-		response = "Welcome to open shift as platform container"
+		response = "Welcome to open shift as platform as a service"
 	}
 
 	fmt.Fprintln(w, response)
