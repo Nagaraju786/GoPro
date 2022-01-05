@@ -33,10 +33,10 @@ func main() {
 	go listenAndServe(port)
 
 	
-        port := os.Getenv("SECOND_PORT")
-	if len(port) == 0 {
-		port = "8088"
+        port1 := os.Getenv("SECOND_PORT")
+	if len(port1) == 0 {
+		port1 = "8088"
 	}
-	go listenAndServe(port)
+	go listenAndServe(port1)
 	
 }
