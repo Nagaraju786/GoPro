@@ -9,7 +9,7 @@ import (
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	response := os.Getenv("RESPONSE")
 	if len(response) == 0 {
-		response = "Hello OpenShift! My First Deployment"
+		response = "Welcome to open shift as platform container"
 	}
 
 	fmt.Fprintln(w, response)
@@ -32,11 +32,7 @@ func main() {
 	}
 	go listenAndServe(port)
 
-	port = os.Getenv("SECOND_PORT")
-	if len(port) == 0 {
-		port = "8888"
-	}
-	go listenAndServe(port)
+	
 
-	select {}
+	
 }
